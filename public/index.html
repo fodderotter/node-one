@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="nodeOne" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Node One</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body ng-controller="rootCtrl">
+
+<textarea ng-model="newMessage.message"
+          title="message">
+</textarea>
+
+<input type="text"
+       ng-model="newMessage.author"
+       title="author" />
+
+<div class="message-container">
+    <div class="message"
+         ng-repeat="message in messages">
+        <p class="author">{{ message.author }}: </p>
+        <p class="message">{{ message.message }}</p>
+    </div>
+</div>
+
+<script src="./src/angular.js"></script>
+<script src="./src/app.js"></script>
+<script src="./src/rootCtrl.js"></script>
+
+</body>
+</html>
